@@ -334,75 +334,55 @@
   <!-- SCRIPT -->
   <script>
 
-    function toggleDetails() {
-      const details = document.getElementById("equipment-details");
+function toggleDetails() {
 
-      details.classList.toggle("hidden");
-    }
+  const details = document.getElementById("equipment-details");
 
-    async function submitBooking() {
+  details.classList.toggle("hidden");
 
-      const btn = document.getElementById("submitBtn");
+}
 
-      btn.innerText = "Menghantar pertanyaan...";
-      btn.disabled = true;
+async function submitBooking() {
 
-      const data = {
-        nama: document.getElementById("nama").value,
-        telefon: document.getElementById("telefon").value,
-        alamatProgram: document.getElementById("alamat").value,
-        pakej: document.getElementById("pakej").value,
-        tarikhMula: document.getElementById("tarikhMula").value,
-        tarikhAkhir: document.getElementById("tarikhAkhir").value
-      };
+  const btn = document.getElementById("submitBtn");
 
-      try {
+  btn.innerText = "Redirecting to WhatsApp...";
+  btn.disabled = true;
 
-        await fetch(
-          "https://script.google.com/macros/s/1Hx-NKNgf3C5xOOX0XOELhKZAktTdPlPc1VQyorABoI-umV-FKElA12Q6/exec",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-          }
-        );
+  const data = {
+    nama: document.getElementById("nama").value,
+    telefon: document.getElementById("telefon").value,
+    alamatProgram: document.getElementById("alamat").value,
+    pakej: document.getElementById("pakej").value,
+    tarikhMula: document.getElementById("tarikhMula").value,
+    tarikhAkhir: document.getElementById("tarikhAkhir").value
+  };
 
-        btn.innerText = "Redirecting to WhatsApp...";
+  const mapsLink =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(data.alamatProgram);
 
-        const mapsLink =
-          "https://www.google.com/maps/search/?api=1&query=" +
-          encodeURIComponent(data.alamatProgram);
+  const whatsappMessage = encodeURIComponent(
+    `Assalamualaikum, saya ingin membuat pertanyaan tempahan PA System.\n\n` +
+    `Nama: ${data.nama}\n` +
+    `No Telefon: ${data.telefon}\n` +
+    `Alamat Program: ${data.alamatProgram}\n` +
+    `Google Maps: ${mapsLink}\n` +
+    `Pakej: ${data.pakej}\n` +
+    `Tarikh Mula Program: ${data.tarikhMula}\n` +
+    `Tarikh Akhir Program: ${data.tarikhAkhir}`
+  );
 
-        const whatsappMessage = encodeURIComponent(
-          `Assalamualaikum, saya ingin membuat pertanyaan tempahan PA System.\n\n` +
-          `Nama: ${data.nama}\n` +
-          `No Telefon: ${data.telefon}\n` +
-          `Alamat Program: ${data.alamatProgram}\n` +
-          `Google Maps: ${mapsLink}\n` +
-          `Pakej: ${data.pakej}\n` +
-          `Tarikh Mula Program: ${data.tarikhMula}\n` +
-          `Tarikh Akhir Program: ${data.tarikhAkhir}`
-        );
+  setTimeout(() => {
 
-        setTimeout(() => {
-          window.location.href =
-            `https://wa.me/60145102864?text=${whatsappMessage}`;
-        }, 1200);
+    window.location.href =
+      `https://wa.me/60145102864?text=${whatsappMessage}`;
 
-      } catch (error) {
+  }, 800);
 
-        alert("Gagal menghantar tempahan. Sila cuba semula.");
+}
 
-        btn.innerText = "Hantar Pertanyaan / Tempahan";
-        btn.disabled = false;
-
-      }
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
