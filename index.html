@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sewa PA System</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- HERO -->
+  <section class="bg-black text-white py-20 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <h1 class="text-5xl font-bold leading-tight mb-6">
+          Sewa PA System
+        </h1>
+
+        <p class="text-2xl text-yellow-400 mb-4">
+          Nilai • Bangi • Seremban • Sepang
+        </p>
+
+        <p class="text-lg text-gray-300 mb-8">
+          Servis sewaan portable speaker dan professional sound system untuk majlis kahwin, seminar, ceramah, sekolah dan event korporat.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#booking-form"
+             class="bg-yellow-400 text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
+            Hantar pertanyaan / tempahan
+          </a>
+
+          <a href="#packages"
+             class="border border-white px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition">
+            Lihat Pakej
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop"
+          alt="PA System"
+          class="rounded-3xl shadow-2xl"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PACKAGE -->
+  <section id="packages" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Pakej Sewaan
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="border rounded-3xl p-8 shadow-sm hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold mb-4">
+            Sewaan Portable Speaker
+          </h3>
+
+          <p class="text-gray-600 mb-6">
+            Sesuai untuk meeting, kelas dan small event.
+          </p>
+
+          <div class="text-4xl font-bold mb-2">RM100</div>
+
+          <div class="inline-block bg-green-100 text-green-700 text-sm px-4 py-2 rounded-full mb-6 font-medium">
+            🚚 Penghantaran percuma sekitar Nilai
+          </div>
+        </div>
+
+        <div class="border-2 border-yellow-400 rounded-3xl p-8 shadow-xl relative">
+          <div class="absolute top-0 right-0 bg-yellow-400 text-black px-4 py-1 rounded-bl-2xl rounded-tr-3xl text-sm font-semibold">
+            Popular
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Sewaan Professional PA System Package
+          </h3>
+
+          <p class="text-gray-600 mb-6">
+            Sesuai untuk dewan, seminar dan majlis sekolah.
+          </p>
+
+          <div class="text-4xl font-bold mb-2">RM800</div>
+
+          <div class="inline-block bg-green-100 text-green-700 text-sm px-4 py-2 rounded-full mb-6 font-medium">
+            🚚 Penghantaran percuma sekitar Nilai
+          </div>
+        </div>
+
+        <div class="border rounded-3xl p-8 shadow-sm hover:shadow-xl transition bg-black text-white">
+
+          <h3 class="text-2xl font-bold mb-4">
+            Professional PA System Full Package
+          </h3>
+
+          <div class="inline-block bg-yellow-400 text-black px-3 py-1 rounded-xl mb-4 text-sm font-semibold">
+            with Technician
+          </div>
+
+          <p class="text-gray-300 mb-6">
+            Untuk event besar, outdoor dan majlis professional.
+          </p>
+
+          <div class="text-4xl font-bold mb-6 text-yellow-400">
+            RM1500
+          </div>
+
+          <button
+            onclick="toggleDetails()"
+            class="w-full border border-yellow-400 text-yellow-400 py-3 rounded-2xl mb-4 hover:bg-yellow-400 hover:text-black transition">
+            See More
+          </button>
+
+          <div id="equipment-details" class="hidden bg-white/10 rounded-2xl p-5 mb-6 space-y-4">
+            <h4 class="font-semibold text-yellow-400 mb-2">
+              Equipment & Support
+            </h4>
+
+            <ul class="space-y-2 text-gray-200 text-sm">
+              <li>• JBL & Behringer professional speaker</li>
+              <li>• Wireless handheld & headset microphone</li>
+              <li>• Yamaha professional mixer</li>
+              <li>• Audio monitoring headphone</li>
+              <li>• Professional audio cabling & stand</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDON -->
+  <section class="py-20 px-6 bg-gray-50">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold mb-6">
+        Saya juga sedang mencari perkhidmatan ini
+      </h2>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-3xl p-6 shadow-lg">
+          <div class="text-5xl mb-4">🎤</div>
+          <h3 class="font-semibold text-lg mb-2">Pengacara Majlis</h3>
+          <p class="text-sm text-gray-500">Add-on event service</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 shadow-lg">
+          <div class="text-5xl mb-4">📷</div>
+          <h3 class="font-semibold text-lg mb-2">Kameraman</h3>
+          <p class="text-sm text-gray-500">Photo coverage</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 shadow-lg">
+          <div class="text-5xl mb-4">🎬</div>
+          <h3 class="font-semibold text-lg mb-2">Videographer</h3>
+          <p class="text-sm text-gray-500">Video production</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 shadow-lg">
+          <div class="text-5xl mb-4">⛺</div>
+          <h3 class="font-semibold text-lg mb-2">Sewaan Khemah</h3>
+          <p class="text-sm text-gray-500">Canopy & event tent</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section id="booking-form" class="py-20 px-6 bg-white">
+
+    <div class="max-w-5xl mx-auto">
+
+      <div class="bg-gray-50 rounded-[2rem] p-8 md:p-12 shadow-xl border border-gray-200">
+
+        <div class="text-center mb-12">
+
+          <div class="inline-block bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            Tempahan Online
+          </div>
+
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Borang Pertanyaan Tempahan PA System
+          </h2>
+
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Pilih pakej dan nyatakan keperluan tambahan sebelum dihantar ke WhatsApp.
+          </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+          <input
+            id="nama"
+            type="text"
+            placeholder="Nama penuh"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white"
+          />
+
+          <input
+            id="telefon"
+            type="text"
+            placeholder="01X-XXXXXXX"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white"
+          />
+
+        </div>
+
+        <div class="mb-6">
+
+          <input
+            id="alamat"
+            type="text"
+            placeholder="Alamat tempat program"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white"
+          />
+
+        </div>
+
+        <div class="mb-6">
+
+          <select
+            id="pakej"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white">
+
+            <option>Sewaan Portable Speaker</option>
+            <option>Sewaan Professional PA System Package</option>
+            <option>Professional PA System Full Package with Technician</option>
+
+          </select>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+          <input
+            id="tarikhMula"
+            type="date"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white"
+          />
+
+          <input
+            id="tarikhAkhir"
+            type="date"
+            class="w-full border border-gray-300 rounded-2xl px-4 py-4 bg-white"
+          />
+
+        </div>
+
+        <button
+          id="submitBtn"
+          onclick="submitBooking()"
+          class="block w-full text-center py-5 rounded-2xl text-xl font-bold bg-black text-white hover:scale-[1.01] transition">
+
+          Hantar Pertanyaan / Tempahan
+
+        </button>
+
+        <p class="text-sm text-gray-500 text-center mt-4">
+          Tempahan akan dihantar ke WhatsApp dan terus direkod ke Google Sheet admin.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-10 px-6">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+      <div>
+        <h3 class="text-2xl font-bold mb-4">
+          Kelab Pemuda Sukarelawan Nilai
+        </h3>
+
+        <p class="text-gray-400">
+          Servis sewaan portable speaker, PA system dan event support sekitar Nilai, Bangi, Seremban dan Sepang.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Kawasan</h4>
+
+        <ul class="space-y-2 text-gray-400">
+          <li>Nilai</li>
+          <li>Bangi</li>
+          <li>Kajang</li>
+          <li>Seremban</li>
+          <li>Sepang</li>
+          <li>Putrajaya</li>
+          <li>Dengkil</li>
+          <li>Senawang</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Hubungi</h4>
+
+        <ul class="space-y-2 text-gray-400">
+          <li>0145102864</li>
+          <li>WhatsApp tersedia</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+
+    function toggleDetails() {
+      const details = document.getElementById("equipment-details");
+
+      details.classList.toggle("hidden");
+    }
+
+    async function submitBooking() {
+
+      const btn = document.getElementById("submitBtn");
+
+      btn.innerText = "Menghantar pertanyaan...";
+      btn.disabled = true;
+
+      const data = {
+        nama: document.getElementById("nama").value,
+        telefon: document.getElementById("telefon").value,
+        alamatProgram: document.getElementById("alamat").value,
+        pakej: document.getElementById("pakej").value,
+        tarikhMula: document.getElementById("tarikhMula").value,
+        tarikhAkhir: document.getElementById("tarikhAkhir").value
+      };
+
+      try {
+
+        await fetch(
+          "https://script.google.com/macros/s/1Hx-NKNgf3C5xOOX0XOELhKZAktTdPlPc1VQyorABoI-umV-FKElA12Q6/exec",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          }
+        );
+
+        btn.innerText = "Redirecting to WhatsApp...";
+
+        const mapsLink =
+          "https://www.google.com/maps/search/?api=1&query=" +
+          encodeURIComponent(data.alamatProgram);
+
+        const whatsappMessage = encodeURIComponent(
+          `Assalamualaikum, saya ingin membuat pertanyaan tempahan PA System.\n\n` +
+          `Nama: ${data.nama}\n` +
+          `No Telefon: ${data.telefon}\n` +
+          `Alamat Program: ${data.alamatProgram}\n` +
+          `Google Maps: ${mapsLink}\n` +
+          `Pakej: ${data.pakej}\n` +
+          `Tarikh Mula Program: ${data.tarikhMula}\n` +
+          `Tarikh Akhir Program: ${data.tarikhAkhir}`
+        );
+
+        setTimeout(() => {
+          window.location.href =
+            `https://wa.me/60145102864?text=${whatsappMessage}`;
+        }, 1200);
+
+      } catch (error) {
+
+        alert("Gagal menghantar tempahan. Sila cuba semula.");
+
+        btn.innerText = "Hantar Pertanyaan / Tempahan";
+        btn.disabled = false;
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
